@@ -1,6 +1,8 @@
 import os
 import sys
 from ctypes import *
+from ctypes.wintypes import MSG
+from ctypes.wintypes import DWORD
 
 
 from pyvjoy.constants import *
@@ -173,10 +175,10 @@ class _JOYSTICK_POSITION_V2(Structure):
 	('wAxisVRBZ', c_long),
 	('lButtons', c_long), # 32 buttons: 0x00000001 means button1 is pressed, 0x80000000 -> button32 is pressed
 	
-	('bHats', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
-	('bHatsEx1', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
-	('bHatsEx2', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
-	('bHatsEx3', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch LONG lButtonsEx1
+#	('bHats', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
+#	('bHatsEx1', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
+#	('bHatsEx2', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch
+#	('bHatsEx3', wintypes.DWORD ),		# Lower 4 bits: HAT switch or 16-bit of continuous HAT switch LONG lButtonsEx1
 	
 	# JOYSTICK_POSITION_V2 Extension
 	
